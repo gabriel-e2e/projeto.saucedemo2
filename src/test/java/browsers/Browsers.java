@@ -1,8 +1,8 @@
 package browsers;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.firefox.FirefoxDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browsers {
 	
@@ -10,8 +10,8 @@ public class Browsers {
 	
 	public void abrirNavegador(String site) {
 		try {
-			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
-			driver = new ChromeDriver();
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 			driver.get(site);
 			driver.manage().window().maximize();
 		} catch (Exception e) {

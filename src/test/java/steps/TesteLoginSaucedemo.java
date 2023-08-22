@@ -29,7 +29,7 @@ public class TesteLoginSaucedemo {
 	@Then("valido o login com sucesso")
 	public void validoOLoginComSucesso() {
 		metodo.clicar(elemento.btnLogin);
-		metodo.evidencia("Login realizado com sucesso");
+		//metodo.evidencia("Login realizado com sucesso");
 		metodo.fecharNavegador();
 
 	}
@@ -44,7 +44,7 @@ public class TesteLoginSaucedemo {
 	@Then("valido o login na pagina com problema")
 	public void validoOLoginNaPaginaComProblema() {
 		metodo.clicar(elemento.btnLogin);
-		metodo.evidencia("Login realizado, pagina com problema");
+		//metodo.evidencia("Login realizado, pagina com problema");
 		metodo.fecharNavegador();
 		
 	}
@@ -65,7 +65,7 @@ public class TesteLoginSaucedemo {
 	public void validoA(String string) {
 		metodo.clicar(elemento.btnLogin);
 		metodo.validarMsgErro(string);
-		metodo.evidencia("validando mensagem de erro");
+		//metodo.evidencia("validando mensagem de erro");
 		metodo.fecharNavegador();
 		
 	}

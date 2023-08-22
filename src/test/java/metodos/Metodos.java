@@ -39,7 +39,7 @@ public class Metodos extends Browsers {
 	
 	
 
-	public void evidencia(String nomeTeste) {
+	/*public void evidencia(String nomeTeste) {
 		TakesScreenshot scrShot = (TakesScreenshot) driver;
 		File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
 		File destFile = new File("./evidencias/" + nomeTeste + ".png");
@@ -50,7 +50,7 @@ public class Metodos extends Browsers {
 			System.out.println("Erro ao tirar evid�ncia");
 		}
 	}
-
+*/
 	public void fecharNavegador() {
 		driver.quit();
 
