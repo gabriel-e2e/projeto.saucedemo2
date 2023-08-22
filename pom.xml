@@ -5,6 +5,9 @@
 	<groupId>com.saucedemo</groupId>
 	<artifactId>projeto.saucedemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -53,9 +56,7 @@
 					<target>7</target>
 				</configuration>
 			</plugin>
-			<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+			
 			
 			
 		</plugins>
