@@ -13,7 +13,7 @@ public class Browsers {
 			
 			System.setProperty("webdriver.http.factory","jdk-http-client");
 			ChromeOptions options = new ChromeOptions();
-			//options.addArguments("--headless");
+			options.addArguments("--headless");
 			driver = new ChromeDriver();
 			driver.get(site);
 			
