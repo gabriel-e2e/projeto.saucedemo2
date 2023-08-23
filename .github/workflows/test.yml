@@ -22,18 +22,20 @@ jobs:
         java-version: '19'
         distribution: 'temurin'
         cache: 'maven'
-    - name: Instalar Chrome
+    - name: Instalar Firefox
       run: |
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb
-
-    - uses: nanasess/setup-chromedriver@v1
-    - run: |
-          export DISPLAY=:99
-          chromedriver --url-base=/wd/hub &
-          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
+          wget -O firefox.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64"
+          tar -xjf firefox.tar.bz2
+          sudo mv firefox /opt/
+          sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+          rm firefox.tar.bz2
+          
+    - uses: browser-actions/setup-firefox@v1
+    - run: firefox --version
+    
     - name: Build with Maven
       run: mvn clean verify
+      
     - name: Run Cucumber Tests
       run: mvn test -Dtest=Executa 
 
